@@ -8,7 +8,6 @@ public class AreaOfTriangle {
         System.out.print("Enter three points for a triangle:");
 
         //collecting inputs
-        double areaOfTriangle;
         double x1 = input.nextDouble();
         double y1 = input.nextDouble();
         double x2 = input.nextDouble();
@@ -25,6 +24,7 @@ public class AreaOfTriangle {
         double s = (side1 + side2 + side3) / 2;
 
         //finding the area of the triangle
+        double areaOfTriangle;
         areaOfTriangle = Math.sqrt(s * (s-side1) * (s-side2) * (s - side3));
 
         System.out.print("The area of the triangle is " + areaOfTriangle);
