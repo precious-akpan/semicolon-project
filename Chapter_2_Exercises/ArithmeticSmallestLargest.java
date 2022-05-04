@@ -27,33 +27,24 @@ public class ArithmeticSmallestLargest {
         /*      I would rather use this technique
             int smallest = Math.min(Math.min(firstInteger, secondInteger), thirdInteger);
             int largest = Math.max(Math.max(firstInteger, secondInteger), thirdInteger);
+
+            largest = first
         */
 
 
-        int smallest = 0;
-        int largest = 0;
 
-        if (firstInteger > secondInteger && firstInteger > thirdInteger) {
-            largest = firstInteger;
-        }
-        if (secondInteger > firstInteger && secondInteger > thirdInteger) {
-            largest = secondInteger;
-        }
-        if (thirdInteger > firstInteger && thirdInteger > secondInteger) {
-            largest = thirdInteger;
-        }
-        if (firstInteger < secondInteger && firstInteger < thirdInteger) {
-            smallest = firstInteger;
-        }
-        if (secondInteger < firstInteger && secondInteger < thirdInteger) {
-            smallest = secondInteger;
-        }
-        if (thirdInteger < firstInteger && thirdInteger < secondInteger) {
-            smallest = thirdInteger;
-        }
+        int smallest, largest;
+
+        largest = firstInteger;
+        if (secondInteger > largest) largest = secondInteger;
+        if (thirdInteger > largest) largest = thirdInteger;
+
+        smallest = firstInteger;
+        if (secondInteger < smallest) smallest = secondInteger;
+        if (thirdInteger < smallest) smallest = thirdInteger;
 
 //        displays the sum, average, product, smallest and largest of the numbers.
-        System.out.printf("%d is the sum of all the integers.%n%n", sum);
+        System.out.printf("%d is the sum of all the integers.%n", sum);
         System.out.printf("%d is the product of all the integers.%n", product);
         System.out.printf("%d is the average of all the integers.%n", average);
         System.out.printf("%d is the smallest of all the integers.%n", smallest);
