@@ -1,3 +1,5 @@
+package Chapter_4_Exercise;
+
 import java.util.Scanner;
 
 public class Grading {
