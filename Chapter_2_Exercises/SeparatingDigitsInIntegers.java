@@ -21,17 +21,17 @@ public class SeparatingDigitsInIntegers {
 
         int firstDigit, secondDigit, thirdDigit, fourthDigit, fifthDigit;
 
-        firstDigit = userInput % 10;
-        userInput /= 10;
-        secondDigit = userInput % 10;
-        userInput /= 10;
-        thirdDigit = userInput % 10;
+        fifthDigit = userInput % 10;
         userInput /= 10;
         fourthDigit = userInput % 10;
         userInput /= 10;
-        fifthDigit = userInput % 10;
+        thirdDigit = userInput % 10;
+        userInput /= 10;
+        secondDigit = userInput % 10;
+        userInput /= 10;
+        firstDigit = userInput % 10;
 
-        System.out.printf("%d   %d   %d   %d   %d", fifthDigit, fourthDigit, thirdDigit, secondDigit, firstDigit);
+        System.out.printf("%d   %d   %d   %d   %d", firstDigit, secondDigit, thirdDigit, fourthDigit, fifthDigit);
 
     }
 }
