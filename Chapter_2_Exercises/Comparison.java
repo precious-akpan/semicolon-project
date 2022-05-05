@@ -15,7 +15,7 @@ public class Comparison {
         System.out.print("Enter an Integer: ");
         int userInput = input.nextInt();
 
-        int comparisonValue = 40;
+        int comparisonValue = 100;
         int userInputSquared = (userInput * userInput);
 
         if (userInput > comparisonValue && userInputSquared > comparisonValue) {
