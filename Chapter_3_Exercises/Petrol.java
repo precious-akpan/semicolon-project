@@ -1,4 +1,4 @@
-package Chapter_3_Exercise;
+package Chapter_3_Exercises;
 
 public class Petrol {
     public static void main(String[] args) {

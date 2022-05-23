@@ -9,7 +9,7 @@ that calculates the net purchase amount (i.e., multiplies the quantity by the pr
 minus the discount, then returns the net amount you had to pay as a double value.
  Write an application class named Petrol that demonstrates the capabilities of class PetrolPurchase.
  */
-package Chapter_3_Exercise;
+package Chapter_3_Exercises;
 
 public class PetrolPurchase {
     private String location;

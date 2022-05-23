@@ -1,4 +1,4 @@
-package Chapter_4_Exercise;
+package Chapter_4_Exercises;
 
 import java.util.Scanner;
 
@@ -25,9 +25,9 @@ public class PassFail {
 
         int maxMark = 100;
         if(userInput > passMark && userInput < maxMark) {
-            System.out.printf("You passed, well done!!");
+            System.out.printf("You passed, well done!! ;-)");
         } else {
-            System.out.printf("You failed! Shame on you!!");
+            System.out.printf("You failed! Shame on you!! ;-(");
         }
     }
 }
