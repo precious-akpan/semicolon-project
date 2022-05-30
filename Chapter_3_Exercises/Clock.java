@@ -12,9 +12,21 @@ public class Clock {
     int hour, minute, second;
 
     public Clock(int hour, int minute, int second) {
-        this.hour = hour;
-        this.minute = minute;
-        this.second = second;
+        if (hour > 23 || hour < 0) {
+            System.out.println("Enter a value between 0 and 59");
+        } else {
+            this.hour = hour;
+        }
+        if (minute > 59 || minute < 0) {
+            System.out.println("Enter a value between 0 and 59");
+        } else {
+            this.minute = minute;
+        }
+        if (second > 59 || second < 0) {
+            System.out.println("Enter a value between 0 and 59");
+        } else {
+            this.second = second;
+        }
     }
 
     public static void main(String[] args) {
