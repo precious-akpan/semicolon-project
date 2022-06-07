@@ -1,0 +1,25 @@
+a) Read the problem statement.
+b) Formulate the algorithm using pseudocode and top-down, stepwise refinement.
+c) Write a Java program.
+d) Test, debug and execute the Java program.
+e) Process three complete sets of data.
+
+
+4.17 (Gas Mileage) Drivers are concerned with the mileage their automobiles get. One driver has
+kept track of several trips by recording the miles driven and gallons used for each tankful. Develop
+a Java application that will input the miles driven and gallons used (both as integers) for each trip.
+The program should calculate and display the miles per gallon obtained for each trip and print the
+combined miles per gallon obtained for all trips up to this point. All averaging calculations should
+produce floating-point results. Use class Scanner and sentinel-controlled iteration to obtain the data
+from the user.
+
+prompt for miles driven
+prompt for gallons used
+
+calculate miles per gallon
+
+add miles per gallon to the running average
+
+print combined miles per gallon result
+
+repeat while input not equal to -1
