@@ -20,18 +20,20 @@ public class GasMileageMain {
                 int mileage = input.nextInt();
                 System.out.println("Enter gallons used this trip");
                 int gallons = input.nextInt();
-
+                if (mileage < 1 || gallons < 1) throw new Exception("Input must be greater than 1");
                 trip.setGallons(gallons);
                 trip.setMiles(mileage);
 
                 milesPerGallon += trip.calculateMPG(trip.getMiles(), trip.getGallons());
                 counter++;
-                System.out.print("You obtained: " + milesPerGallon + " miles per gallon for " + counter + (counter > 1 ? " trips!\n" : " trip\n"));
+                System.out.print("You obtained: " + milesPerGallon + " miles per gallon for " + counter + (counter > 1 ? " trips!\n" : " trip!\n"));
 
-                System.out.println("Enter 0 to continue or -1 to end");
+                System.out.println("Enter any integer to continue or -1 to end");
                 userInput = input.nextInt();
             } catch (Exception e) {
-                System.out.println("You entered an invalid input, please enter integers");
+                System.out.println(e);
+//                e.printStackTrace();
+                System.out.println("You entered an invalid input!");
                 break;
             }
         }
