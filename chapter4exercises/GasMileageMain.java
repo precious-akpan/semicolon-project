@@ -32,9 +32,7 @@ public class GasMileageMain {
                 userInput = input.nextInt();
             } catch (Exception e) {
                 System.out.println(e);
-//                e.printStackTrace();
                 System.out.println("You entered an invalid input!");
-                break;
             }
         }
     }
