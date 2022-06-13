@@ -21,6 +21,20 @@ class GasMileageTest {
     }
 
     @Test
+    void testForGallonValuesLessThanOne() {
+        GasMileage trip = new GasMileage();
+        trip.setGallons(-1);
+        assertEquals(0, trip.getGallons());
+    }
+
+    @Test
+    void testForValuesLessThanOne() {
+        GasMileage trip = new GasMileage();
+        trip.setMiles(-1);
+        assertEquals(0, trip.getMiles());
+    }
+
+    @Test
     void testForMilesPerGallon() {
         GasMileage trip = new GasMileage();
         trip.setGallons(20);

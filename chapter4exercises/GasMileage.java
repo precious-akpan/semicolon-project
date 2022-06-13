@@ -12,15 +12,19 @@ public class GasMileage {
         this.miles = miles;
     }
 
+
     public int getGallons() {
         return gallons;
     }
 
     public void setGallons(int gallons) {
+        if (gallons < 1) {
+            return;
+        }
         this.gallons = gallons;
     }
 
-    public double calculateMPG(int miles, int gallons) {
+    public int calculateMPG(int miles, int gallons) {
         return miles / gallons;
     }
 }
