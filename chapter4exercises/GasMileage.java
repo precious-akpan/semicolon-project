@@ -9,7 +9,11 @@ public class GasMileage {
     }
 
     public void setMiles(int miles) {
-        this.miles = miles;
+        if (miles < 0) {
+            System.out.println("Miles cannot be less than zero");
+            return;
+        }
+            this.miles = miles;
     }
 
 
