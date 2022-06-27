@@ -9,6 +9,10 @@ public class Student {
     ArrayList<String> courses = new ArrayList<String>();
 
 
+    public Student() {
+        super();
+    }
+
 
     public String getStudentName() {
         return studentName;

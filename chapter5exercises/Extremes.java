@@ -17,7 +17,7 @@ public class Extremes {
 
         int counter = 1;
         int min = 1_000_000_000;
-        int max = 0;
+        int max = Integer.MIN_VALUE;
 
         while (counter <= numberOfValues) {
             System.out.print("Enter number " + counter + ": >>> ");

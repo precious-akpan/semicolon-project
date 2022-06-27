@@ -2,8 +2,7 @@ package ClassTasks.Sms;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class CourseTest {
     Course course = new Course();
@@ -16,7 +15,7 @@ class CourseTest {
     @Test
     void courseCanBeViewedTest() {
         course.setCourseName("Biology");
-        assertTrue(course.viewCourseName().equals("Biology"));
+        assertEquals("Biology", course.viewCourseName());
 
 
     }
@@ -24,7 +23,7 @@ class CourseTest {
     @Test
     void courseCanBeSetTest() {
         course.setCourseName("Physics");
-        assertTrue(course.viewCourseName().equals("Physics"));
+        assertEquals("Physics", course.viewCourseName());
     }
 
 

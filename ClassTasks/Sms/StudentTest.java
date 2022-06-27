@@ -1,16 +1,21 @@
 package ClassTasks.Sms;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StudentTest {
-    Student student = new Student();
+    Student student;
+    @BeforeEach
+    void setUp() {
+        Student student = new Student();
+    }
 
     @Test
     void studentNameCanBeSet() {
         student.setStudentName("Angela");
-        assertTrue(student.getStudentName().equals("Angela"));
+        assertEquals("Angela", student.getStudentName());
     }
 
     @Test
@@ -24,8 +29,8 @@ class StudentTest {
         student.selectCourse("English");
         student.selectCourse("Biology");
         student.selectCourse("Science");
+        assertEquals(4, student.courses.size());
         assertFalse(student.courses.isEmpty());
-        System.out.println(student.courses);
 
     }
 
@@ -38,6 +43,6 @@ class StudentTest {
         student.removeCourse("Maths");
         student.removeCourse("Science");
         System.out.println(student.courses);
-        //assertTrue(student.courses.isEmpty());
+        assertTrue(student.courses.isEmpty());
     }
 }

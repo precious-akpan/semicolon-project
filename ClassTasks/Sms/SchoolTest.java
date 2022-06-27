@@ -9,9 +9,7 @@ class SchoolTest {
 
     @Test
     void schoolCanBeCreatedTest() {
-
         assertEquals("semicolon", school.schoolName);
-
     }
 
     @Test
@@ -64,6 +62,10 @@ class SchoolTest {
         school.deleteCourse("Maths");
         assertFalse(school.courses.contains("Maths"));
     }
+@Test
+    void testNumberOfStudentPerCourse(){
+        school.getNumberOfStudentsPerCourse();
 
+}
 
 }

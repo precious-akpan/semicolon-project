@@ -6,17 +6,20 @@ public class School {
 
     public String schoolName;
     public int numberOfStudents;
-    ArrayList<String> students = new ArrayList<>();
-
+    public ArrayList<String> students = new ArrayList<>();
+    public ArrayList<String> courses = new ArrayList<>();
+    private ArrayList<String> studentCourses = new ArrayList<>();
     private int numberOfStudentsPerCourse;
     private int numberOfCourses;
-
-    ArrayList<String> courses = new ArrayList<>();
     private int studentId;
 
 
     public School(String schoolName) {
-this.schoolName = schoolName;
+        this.schoolName = schoolName;
+    }
+
+    public School() {
+        super();
     }
 
     public String getSchoolName() {
@@ -31,12 +34,13 @@ this.schoolName = schoolName;
         return students.size();
     }
 
-    public void setNumberOfStudents(int numberOfStudents) {
+    private void setNumberOfStudents(int numberOfStudents) {
         this.numberOfStudents = numberOfStudents;
     }
 
     public int getNumberOfStudentsPerCourse() {
-        return numberOfStudentsPerCourse;
+        return studentCourses.size();
+
     }
 
     public void setNumberOfStudentsPerCourse(int numberOfStudentsPerCourse) {
@@ -61,7 +65,7 @@ this.schoolName = schoolName;
     }
 
     public void createCourse(String courseName) {
-       courses.add(courseName);
+        courses.add(courseName);
     }
 
     public void deleteCourse(String courseName) {
@@ -71,4 +75,13 @@ this.schoolName = schoolName;
     public void admitStudent(String studentName) {
         students.add(studentId++, studentName);
     }
-}
+
+      /*  ArrayList<String> p=new ArrayList<String>();//Creating arraylist
+       *//* list.add("Mango");//Adding object in arraylist
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Grapes");*//*
+        //Printing the arraylist object
+        System.out.println(list);*/
+    }
+

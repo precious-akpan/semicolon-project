@@ -4,6 +4,11 @@ public class Course {
     private String courseName;
     private String courseId;
 
+
+    public Course() {
+        super();
+    }
+
     public String getCourseId() {
         return courseId;
     }
