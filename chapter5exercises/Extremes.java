@@ -32,8 +32,8 @@ public class Extremes {
             }
             counter++;
         }
-        System.out.println("The highest number is: " + max);
-        System.out.println("The lowest number is: " + min);
-        System.out.println("Sum of highest and lowest: " + (max + min));
+        System.out.println("The maximum number is: " + max);
+        System.out.println("The minimum number is: " + min);
+        System.out.println("Sum of maximum and minimum: " + (max + min));
     }
 }
