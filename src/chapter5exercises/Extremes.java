@@ -16,21 +16,24 @@ public class Extremes {
         int numberOfValues = input.nextInt();
 
         int counter = 1;
-        int min = 1_000_000_000;
+        int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
+        try {
+            while (counter <= numberOfValues) {
+                System.out.print("Enter number " + counter + ": >>> ");
+                int userInput = input.nextInt();
 
-        while (counter <= numberOfValues) {
-            System.out.print("Enter number " + counter + ": >>> ");
-            int userInput = input.nextInt();
+                if (userInput < min) {
+                    min = userInput;
+                }
 
-            if (userInput < min) {
-                min = userInput;
+                if (userInput > max) {
+                    max = userInput;
+                }
+                counter++;
             }
-
-            if (userInput > max) {
-                max = userInput;
-            }
-            counter++;
+        } catch (Exception e) {
+            System.out.println("invalid input");
         }
         System.out.println("The maximum number is: " + max);
         System.out.println("The minimum number is: " + min);

@@ -9,13 +9,14 @@ public class SalesCommissionCalculatorMain {
         SalesCommissionCalculator earnings = new SalesCommissionCalculator();
 
         Scanner input = new Scanner(System.in);
-
-        int sentinel = 0;
-        while (sentinel != -1) {
-            System.out.println("Enter sale price: >>> ");
+        System.out.println("Enter total number of items to enter: >>>");
+        int numberOfItems = input.nextInt();
+        int counter = 1;
+        while (counter <= numberOfItems) {
+            System.out.printf("Enter item %d sale price: >>> ", counter);
             earnings.sale(input.nextDouble());
-            System.out.println("Enter -1 to end to 0 to enter another sale");
-            sentinel = input.nextInt();
+
+            counter++;
         }
         System.out.println("Weekly Salary: " + earnings.getWeekSalary());
     }

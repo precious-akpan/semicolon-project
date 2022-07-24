@@ -24,7 +24,7 @@ public class CreditLimitCalculator {
 
         System.out.println("You new balance is :" + customer.calculateBalance());
 
-        if (customer.getBalance() > customer.getCreditLimit()) {
+        if (customer.getBalance() < customer.getCreditLimit()) {
             System.out.println("You have exceeded your credit limit");
         } else {
             System.out.println("You are still within your credit limit, happy shopping!");
